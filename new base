@@ -46,18 +46,14 @@ def col():
   colour = input("colour: ")
   t.pencolor(colour)
 
-def stop():
-  temp = input("clear? (clears the screen and stops the program) y/n: ")
-  if temp == "y":
-    wn.clear()
-
 def keybinds():
-  print("Arrow keys to move \ndetail level: m \ncolour: n \npenup: b \npendown: v \nquit: p \nkeybinds: k \npen size: t")
+  print("Arrow keys to move \ndetail level: m \ncolour: n \npenup: b \npendown: v \nkeybinds: k \npen size: t")
 
 def thickness():
   t.pensize(int(input("thickness: ")))
 #executions
 keybinds()
+t.ondrag(t.goto)
 wn.onkey(f, "Up")
 wn.onkey(l, "Left")
 wn.onkey(r, "Right")
@@ -66,7 +62,6 @@ wn.onkey(det, "m")
 wn.onkey(col, "n")
 wn.onkey(t.penup, "b")
 wn.onkey(t.pendown, "v")
-wn.onkey(stop, "p")
 wn.onkey(keybinds, "k")
 wn.onkey(thickness, "t")
 
